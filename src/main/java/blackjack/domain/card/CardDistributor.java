@@ -6,12 +6,10 @@ public class CardDistributor {
 
     private static final String DECK_IS_EMPTY = "카드가 모두 소요됐습니다.";
 
-    private final DeckGenerator deckGenerator;
     private final Deque<Card> deck;
 
-    public CardDistributor(DeckGenerator deckGenerator) {
-        this.deckGenerator = deckGenerator;
-        deck = deckGenerator.generateDeck();
+    public CardDistributor(Deque<Card> deck) {
+        this.deck = deck;
     }
 
     public Card distribute() {

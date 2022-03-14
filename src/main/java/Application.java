@@ -5,7 +5,7 @@ import blackjack.domain.card.DeckGenerator;
 public class Application {
     public static void main(String[] args) {
         DeckGenerator deckGenerator = new DeckGenerator();
-        CardDistributor cardDistributor = new CardDistributor(deckGenerator);
+        CardDistributor cardDistributor = new CardDistributor(deckGenerator.generateDeck());
         BlackJackController blackJackController = new BlackJackController(cardDistributor);
         blackJackController.run();
     }
